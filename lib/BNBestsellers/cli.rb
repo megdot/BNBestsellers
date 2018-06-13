@@ -64,7 +64,7 @@ class BNBestsellers::CLI
     puts ""
     puts "----------- List Price -------------"
     puts ""
-    puts "#{book.old_price}"
+    puts "#{book.list_price}"
     puts ""
     puts "------------ Discount --------------"
     puts ""
