@@ -30,51 +30,54 @@ class BNBestsellers::CLI
     puts "Come back soon!"
     main_menu
   end
-  
+
   def list_books
-		BNBestsellers::Book.all.each.with_index(1) do |book, i|
-			puts "#{i}. #{book.name}"
-		end
-	end
+    BNBestsellers::Book.all.each.with_index(1) do |book, i|
+      puts "#{i}. #{book.name}"
+    end
+  end
 
-	def print_info(book)
-		puts "-------------- Name ----------------"
-		puts ""
-		puts "#{book.name}"
-		puts ""
-		puts "------------- Author ---------------"
-		puts ""
-		puts "#{book.author}"
-		puts ""
+  def print_info(book)
+    puts "-------------- Name ----------------"
+    puts ""
+    puts "#{book.name}"
+    puts ""
+    puts "------------- Author ---------------"
+    puts ""
+    puts "#{book.author}"
+    puts ""
     puts "------------- Rating ---------------"
-		puts ""
-		puts "#{book.rating} out of 5"
-		puts ""
+    puts ""
+    puts "#{book.rating} out of 5"
+    puts ""
     puts "------------ Published -------------"
-		puts ""
-		puts "#{book.release_date}"
-		puts ""
-		puts "------------- Price ----------------"
-		puts ""
-		puts "#{book.price}"
-		puts ""
-		puts "----------- List Price -------------"
-		puts ""
-		puts "#{book.old_price}"
-		puts ""
+    puts ""
+    puts "#{book.release_date}"
+    puts ""
+    puts "------------ Format --------------"
+    puts ""
+    puts "#{book.book_format}"
+    puts ""
+    puts "------------- Price ----------------"
+    puts ""
+    puts "#{book.price}"
+    puts ""
+    puts "----------- List Price -------------"
+    puts ""
+    puts "#{book.old_price}"
+    puts ""
     puts "------------ Discount --------------"
-		puts ""
-		puts "#{book.discount}"
-		puts ""
-		puts "--------------- URL ----------------"
-		puts ""
-		puts "www.barnesandnoble.com#{book.url}"
-		puts ""
-		puts "------------- Overview -------------"
-		puts ""
-		puts "#{book.overview}"
-		puts ""
-	end
-
+    puts ""
+    puts "#{book.discount}"
+    puts ""
+    puts "--------------- URL ----------------"
+    puts ""
+    puts "www.barnesandnoble.com#{book.url}"
+    puts ""
+    puts "------------- Overview -------------"
+    puts ""
+    puts "#{book.overview}"
+    puts ""
+  end
 
 end
